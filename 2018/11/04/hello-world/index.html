@@ -74,10 +74,34 @@
                 </ul>
             
         </div>
+		
+			
+		
         
-    <div id="gitalk-container" class="comment link" data-ae="true" data-ci="ebfc78f4e25f2f66c84f" data-cs="cc92ccc49a844f88f30dbfd3d52acad085e22571" data-r="formrfang.github.io" data-o="formrfang" data-a="formrfang" data-d="false">查看评论</div>
-
-
+		<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+		<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+		<div id="comment" class="vcomment"></div>
+		<script>
+        var notify = 'true' == true ? true : false;
+        var verify = 'true' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "TBfKHoW0KFQQrMqhVRkueCMi-gzGzoHsz",
+            appKey: "hmDImvQyAzawR6FePvlvKMYY",
+            avatar:'mm',
+            placeholder: "Just go go",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+    </script>
+  
     </div>
     
 </div>
@@ -86,7 +110,7 @@
     </div>
 </div>
 </body>
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
 <script src="/js/plugin.js"></script>
 <script src="/js/diaspora.js"></script>
