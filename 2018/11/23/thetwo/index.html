@@ -21,7 +21,79 @@
 </html>
 <body class="loading">
     <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">欢迎你的光临呀.</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class="main">
+        <h1 class="title">欢迎你的光临呀.</h1>
+        <div class="stuff">
+            <span>十一月 23, 2018</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p>目前有个小BUG,需要刷新才会显示评论区.</p>
+<p><img src="/img/welcome-cover.jpg"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="http://www.ytmp3.cn/down/47769.mp3">
+            </audio>
+            
+        </div>
+		
+			
+		
+        
+		<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+		<script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+		<div id="comment" class="vcomment"></div>
+		<script>
+        var notify = 'true' == true ? true : false;
+        var verify = 'true' == true ? true : false;
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+        window.valine = new Valine({
+            el: '.vcomment',
+            notify: notify,
+            verify: verify,
+            appId: "TBfKHoW0KFQQrMqhVRkueCMi-gzGzoHsz",
+            appKey: "hmDImvQyAzawR6FePvlvKMYY",
+            avatar:'mm',
+            placeholder: "Just go go",
+            guest_info:guest_info,
+            pageSize:'10'
+        });
+    </script>
+  
+    </div>
     
+</div>
+
+
+    </div>
+</div>
 </body>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
